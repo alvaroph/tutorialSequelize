@@ -1,12 +1,13 @@
 import { Sequelize } from 'sequelize';
 
 export const sequelize = new Sequelize(
-  'biblioteca',    // Nom BD
-  'alvaroph',        // Usuari MySQL
-  '1234',      // Contrasenya
+  process.env.DB_NAME || 'biblioteca',
+  process.env.DB_USER || 'root',
+  process.env.DB_PASSWORD || 'secret',
   {
-    host: '172.25.143.153',
+    host: process.env.DB_HOST || 'localhost',
     dialect: 'mysql',
+    port: process.env.DB_PORT || 3306,
     logging: false
   }
 );
