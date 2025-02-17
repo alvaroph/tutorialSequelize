@@ -2,10 +2,10 @@ import { Sequelize } from 'sequelize';
 
 export const sequelize = new Sequelize(
   'biblioteca',    // Nom BD
-  'usuari',        // Usuari MySQL
-  'pwd',      // Contrasenya
+  'alvaroph',        // Usuari MySQL
+  '1234',      // Contrasenya
   {
-    host: 'localhost',
+    host: '172.25.143.153',
     dialect: 'mysql',
     logging: false
   }
